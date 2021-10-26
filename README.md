@@ -20,6 +20,10 @@ Instead, it uses metamask and web3 to create a signed message and then sends it 
    action: "attack"
 }
 
+```
+npm start
+```
+
 2. Backend
 
 An express.js server-side node.js project with a single post endpoint, handling the "send stuff" call from our single button.
@@ -29,5 +33,9 @@ This project also uses web3, but instead of singing a message it uses the "web3.
 We return an error if the user tries to call with a post body where "sender" is different from the signer address. 
 
 _This then gives us a "msg.sender" gaurentee in node.js the same as we have in solidity!_
+
+```
+npm start
+```
 
 
