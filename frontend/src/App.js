@@ -23,7 +23,6 @@ function App() {
         const accounts = await web3.eth.getAccounts();
         console.log(accounts)
 
-
         const dataToSend = {
           signedAs: forgedAddress || accounts[0],
           sender: 'Jim',
@@ -34,7 +33,7 @@ function App() {
 
         // const accounts = web3.eth.accounts.getAcounts();
 
-        console.log('signing...')
+        console.log('signing...', accounts[0])
 
         // const signedPayload = await web3.eth.sign(JSON.stringify(dataToSend), accounts[0]);
         const signedPayload = await web3.eth.personal.sign(JSON.stringify(dataToSend), accounts[0]);
@@ -56,8 +55,6 @@ function App() {
         const data = await response.json();
 
         console.log('got a response: ', data);
-        // });
-
 
 
       } catch (error) {
